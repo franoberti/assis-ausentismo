@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='position-absolute bottom-0 start-0 end-0'>
         <div className='d-flex justify-content-center align-items-center'>
-            <h1>FOOTER</h1>
+            <p className='text6'>Assis V1 ©</p>
         </div>
     </div>
   )
