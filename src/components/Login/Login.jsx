@@ -30,7 +30,7 @@ const Login = () => {
             
             <div className='col-12 inv'>
               <input 
-                  type="text" 
+                  type="password" 
                   name="password" 
                   placeholder="password*" 
                   required 
