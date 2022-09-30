@@ -3,12 +3,17 @@ import iconGuardia from '../../assets/iconGuardia.png'
 import iconFabrica from '../../assets/IconFabrica.png'
 import iconClinica from '../../assets/IconClinica.png'
 import iconReporte from '../../assets/IconReporte.png'
+import Navbar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 import './style.css'
 
 const Home = () => {
   return (
-    
-    <div>
+
+    <>
+      <Navbar/>
+
+      <div>
         <div className='d-flex justify-content-center align-items-center'>
           <h2 className='titulo'>Hello, Welcome!</h2>
         </div>
@@ -53,7 +58,13 @@ const Home = () => {
           </div>
 
         </div>
-    </div>
+      </div>
+
+      <Footer/>
+    
+    </>
+    
+    
 
     
   )
