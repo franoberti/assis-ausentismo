@@ -7,7 +7,7 @@ import {NavLink} from 'react-router-dom'
 const SignUp = () => {
   return (
     <div>
-      <div className='loginContainer'>
+      <div className='signUpContainer'>
         <div className='inv'>
           <div className='inv d-flex align-items-center justify-content-center'>
             <img src={logo} alt="logo" className='inv' width={70} style={{margin: '8px', paddingTop: '30px'}} />
