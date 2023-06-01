@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 import logo from '../../assets/logoAssis.png'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -62,6 +62,7 @@ const Login = () => {
             </div>
 
           </div>
+
         </div>
       </div>
     </div>
