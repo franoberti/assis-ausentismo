@@ -6,10 +6,15 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import {NavLink} from 'react-router-dom'
+import { app } from "../../services/index.js"
+
 
 
 const NavBar = () => {
 
+  const logOut = ( ) => {
+    app.auth().signOut()
+  }
 
   const [popUpSesion, setSopUpSesion] = useState(false)
 
@@ -31,7 +36,7 @@ const NavBar = () => {
           <div className='d-flex justify-content-center align-items-center inv' style={{width: '40px', height: '40px', cursor: 'pointer'}}>
             <FontAwesomeIcon className='inv icono' icon={faBars}/>
           </div>
-          <NavLink to={'/home'} style={{color: 'black'}} className='inv'>
+          <NavLink to={'/'} style={{color: 'black'}} className='inv'>
             <div className='d-flex justify-content-center align-items-center inv'>
               <img src={logo} alt="logo" className='inv' width={38} style={{margin: '8px'}} />
               <h6 style={{marginBottom: '0px', textDecoration: 'none'}} className='inv' >Assis Software</h6>
@@ -55,7 +60,7 @@ const NavBar = () => {
       <div className='popUpSesion'>
         <NavLink to={'/'} className='col-12 inv'>
               <div className='col-12 inv'>
-                <button className=' col-12 btn btn-secondary' style={{marginTop: '5px'}}>
+                <button onClick={logOut} className=' col-12 btn btn-secondary' style={{marginTop: '5px'}}>
                   Log Out
                 </button>
               </div>
