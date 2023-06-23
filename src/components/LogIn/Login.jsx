@@ -19,7 +19,7 @@ const Login = (props) => {
     const email = e.target.emailField.value
     const password = e.target.passField.value
     try {
-      const response = await axios.get('http://localhost:3001/api/users', {
+      const response = await axios.get('https://assis-factory.fly.dev/api/users', {
         params: {
           email: email,
           pass: password,

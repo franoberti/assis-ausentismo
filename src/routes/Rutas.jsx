@@ -14,9 +14,6 @@ const Rutas = () => {
 
   const [user, setUser] = useState(null)
 
-  const userLocalStorage = localStorage.getItem('usuario')
-  const usuario = JSON.parse(userLocalStorage)
-
 
 
   return (
