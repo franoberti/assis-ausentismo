@@ -27,7 +27,7 @@ const SignUp = () => {
     if (pass1 === pass2) {
       console.log(name, lastName, email, pass1, pass2)
       try {
-        const response = await axios.post('http://localhost:3001/api/users', {
+        const response = await axios.post('https://assis-ausentismo-backend.vercel.app/api/users', {
             name: name,
             lastName: lastName,
             email: email,
