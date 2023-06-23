@@ -6,14 +6,19 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import {NavLink} from 'react-router-dom'
-import { app } from "../../services/index.js"
 
-
-
-const NavBar = () => {
+const NavBar = (props) => {
+  
+  const userLocalStorage = localStorage.getItem('usuario')
+  const user = JSON.parse(userLocalStorage)
+  const userName = user.name
+  const userLastName = user.lastName
 
   const logOut = ( ) => {
-    app.auth().signOut()
+
+    localStorage.clear()
+    props.setUser(null)
+
   }
 
   const [popUpSesion, setSopUpSesion] = useState(false)
@@ -39,7 +44,7 @@ const NavBar = () => {
           <NavLink to={'/'} style={{color: 'black'}} className='inv'>
             <div className='d-flex justify-content-center align-items-center inv'>
               <img src={logo} alt="logo" className='inv' width={38} style={{margin: '8px'}} />
-              <h6 style={{marginBottom: '0px', textDecoration: 'none'}} className='inv' >Assis Software</h6>
+              <h6 style={{marginBottom: '0px', textDecoration: 'none'}} className='inv' >Assis Solutions</h6>
             </div>
           </NavLink>
         </div>
@@ -47,7 +52,7 @@ const NavBar = () => {
         
 
         <div className='d-flex justify-content-center align-items-center inv'>
-          <p className='inv text5' style={{marginBottom: '0px', marginRight: '10px'}}>nombre usuario</p>
+          <p className='inv text5' style={{marginBottom: '0px', marginRight: '10px'}}>{userName} {userLastName}</p>
           <div className='divisor'></div>
           <div className='inv' onClick={() => handlePopUpSesion()}><FontAwesomeIcon icon={faCircleUser} className='inv icono' style={{color: '#616161'}}/></div>
           

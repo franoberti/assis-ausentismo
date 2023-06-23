@@ -9,15 +9,20 @@ import Footer from '../Footer/Footer'
 import {NavLink} from 'react-router-dom'
 import './style.css'
 
-const Home = () => {
+const Home = (props) => {
+
+  const userLocalStorage = localStorage.getItem('usuario')
+  const user = JSON.parse(userLocalStorage)
+  const userName = user.name
+
   return (
 
     <>
-      <Navbar/>
+      <Navbar setUser={props.setUser}/>
 
       <div>
         <div className='d-flex justify-content-center align-items-center'>
-          <h2 className='titulo'>Hello, Welcome!</h2>
+          <h2 className='titulo'>Hola {userName}, Bienvenido!</h2>
         </div>
         
         <div className='container'>

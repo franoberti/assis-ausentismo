@@ -3,10 +3,10 @@ import Navbar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import './style.css'
 
-const Fabrica = () => {
+const Fabrica = (props) => {
     return (
         <>
-            <Navbar/>
+            <Navbar  setUser={props.setUser}/>
 
             <Footer/>
         </>
